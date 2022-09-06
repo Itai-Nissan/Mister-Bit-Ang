@@ -1,0 +1,18 @@
+<div class="homepage-container">
+    <div class="hompage-wrapper">
+        <ng-container *ngIf="(user$|async) as user">
+            <h2 class="">Hi {{user.name}}</h2>
+            <hr>
+            <div class="home-page-info">
+                <h6>CURRENT BALANCE</h6>
+                <h4 class="">Coins: {{user.coins}}</h4>
+                <h4 class="">Bitcoin rate: {{rate}}$</h4>
+            </div>
+            <moveslist class="moves" [user]="user"></moveslist>
+        </ng-container>
+    </div>
+    <div class=""></div>
+    <div class="statistics">
+        <statistics></statistics>
+    </div>
+</div>

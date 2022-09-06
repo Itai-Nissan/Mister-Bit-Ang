@@ -1,0 +1,18 @@
+<header class="container">
+    <h1 class="logo">MisterBit</h1>
+
+    <nav>
+        <a exact class='main-nav-item' routerLink="/home"  routerLinkActive="selected">
+            Home
+        </a>
+        <a class='main-nav-item' routerLink="/contacts" routerLinkActive="selected">
+            Contacts
+        </a>  
+        <a *ngIf="!(user$|async) as user" class='main-nav-item' routerLink="/signup" routerLinkActive="selected">
+            Signup
+        </a>  
+        <a class='main-nav-item' routerLink="/statistics" routerLinkActive="selected">
+            Statistics
+        </a>  
+        </nav>
+</header>

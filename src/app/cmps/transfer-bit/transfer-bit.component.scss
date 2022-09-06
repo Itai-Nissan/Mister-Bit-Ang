@@ -1,0 +1,27 @@
+:host {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+}
+
+.transfer-form {
+  display: flex;
+}
+
+.transferfund-container {
+  flex-direction: column;
+  margin-block-start: 1em;
+
+  input {
+    min-width: 5rem;
+    font-size: 1rem;
+    border: none;
+    background-color: #18222b;
+    border-radius: 7px 0 0 7px;
+    color: white;
+  }
+
+  .button {
+    border-radius: 0 7px 7px 0;
+  }
+}

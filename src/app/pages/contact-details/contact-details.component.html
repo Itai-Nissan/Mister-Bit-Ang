@@ -1,0 +1,27 @@
+<section class="contact-details">
+    <div class="details-container">
+        <div class="details-top">
+            <div class="edit-contact">
+                <a routerLink="/edit/{{contact._id}}">Edit contact</a>
+            </div>
+            <div class="">
+                <button (click)="onRemoveContact(contact._id)">&#10006;</button>
+            </div>
+        </div>
+        <div class="img">
+            <img src="https://robohash.org/{{contact._id}}?set=set6" alt="">
+        </div>
+        <div class="details-info">
+            <h1>Name: <span>{{contact.name}}</span></h1>
+            <p>Email: <span>{{contact.email}}</span></p>
+            <p>Phone: <span>{{contact.phone}}</span></p>
+        </div>
+        <div class="flex transfer-moves-container">
+            <transferbit [contact]="contact"></transferbit>
+        </div>
+    </div>
+    <div class="space"></div>
+    <div class="moves-container">
+        <moveslist *ngIf="user" [contact]="contact" [user]="user"></moveslist>
+    </div>
+</section>

@@ -1,0 +1,29 @@
+.contact-edit {
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    h2 {
+        margin-block-end: 1em;
+        color: #d1d1d1;
+
+    }
+
+    input {
+        min-width: 50%;
+        height: 30px;
+        font-size: 1rem;
+        color: #5e6871;
+        background-color: #101a23;
+        ;
+        border: none;
+        border-radius: 7px;
+        margin-block-end: 0.7em;
+    }
+
+    button{
+        max-width: 50px;
+    }
+
+}

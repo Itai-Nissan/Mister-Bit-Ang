@@ -1,0 +1,23 @@
+header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    background-color: #263643a0;
+    color: whitesmoke;
+    // margin-bottom: 30px;
+    font-size: 1.2em;
+
+    .selected{
+        color: #da8933ca;
+    }
+
+    h1.logo {
+        flex-grow: 1;
+    }
+
+    nav {
+        a:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+}   

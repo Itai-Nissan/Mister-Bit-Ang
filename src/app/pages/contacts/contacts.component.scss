@@ -1,0 +1,22 @@
+
+.contact-page-util{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block-end: 1em;
+    a{
+        text-align: center;
+        padding: 5px 10px;
+        cursor: pointer;
+        min-width: 120px;
+        background-color: #ef4c6e;
+        color: white;
+        border-radius: 7px;
+      }      
+      .a:hover {
+        background-color: #863c4d;
+        // color: #464159;
+      }
+    
+    
+}

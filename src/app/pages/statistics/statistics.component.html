@@ -1,0 +1,12 @@
+<section class="chart-container">
+    <img *ngIf="!newMarketData && !marketTableTitle && !newTransactionsData && !transactionsTableTitle"
+        src="../../../assets/img/loading-14.gif" alt="">
+    <div *ngIf="!newMarketData && !marketTableTitle && !newTransactionsData && !transactionsTableTitle"
+        class="flex loading-container">
+    </div>
+    <div *ngIf="newMarketData && newMarketData && newTransactionsData && transactionsTableTitle">
+        <chart [marketTableTitle]="marketTableTitle" [marketData]="newMarketData"
+            [transactionsTableTitle]="transactionsTableTitle" [transactionsData]="newTransactionsData">
+        </chart>
+    </div>
+</section>

@@ -1,0 +1,30 @@
+<section class="moves-list">
+    <p>Moves history :</p>
+    <ng-container *ngIf="user.moves.length">
+        <div class="capitalize contactdetails-title-container">
+            <div *ngIf="!contact" class="homepage-title-container">
+                <p>Previous moves:</p>
+            </div>
+        </div>
+    </ng-container>
+    <div *ngIf="contact && !isMovesToContact " class="capitalize notransfers-container">
+        no transfers have been made to this contact
+    </div>
+    <div *ngIf="!contact && !user.moves.length" class="capitalize notransfers-container">
+        no transfers have been made yet
+    </div>
+    <div *ngFor="let move of user.moves">
+        <div *ngIf="contact?.name===move.to" class="flex move-container">
+            <p class="amount capitalize">coins transfered: {{move.amount}}</p>
+            <p class="date-container">{{move.at | date: 'dd.MM.yy HH:mm '}}</p>
+        </div>
+    </div>
+    <div *ngIf="user.moves.length && !contact" class="homepage-container user-moves">
+        <div *ngFor="let move of user.moves|slice:0:3" class="capitalize flex transfers-container">
+            <hr style="width:100%">
+            <span class="name-container">To {{move.to}}</span>
+            <span>Amount: {{move.amount}} coins</span>
+            <p>At: {{move.at | date: 'dd.MM.yy HH:mm'}}</p>
+        </div>
+    </div>
+</section>
