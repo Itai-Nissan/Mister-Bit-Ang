@@ -12,16 +12,16 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   justify-content: space-evenly;
-  
+
   // background-color: #141b2387;
   border-radius: 7px;
   min-width: 800px;
-  
+
   padding-left: 10px;
   padding-right: 10px;
   color: #b0b8bd;
-  
-  .hompage-wrapper{
+
+  .hompage-wrapper {
     min-width: 300px;
   }
 
@@ -68,6 +68,16 @@
 }
 
 @media screen and (max-width: 878px) {
+  .homepage-container {
+    min-width: 747px;
+    display: grid;
+    // display: flex;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    justify-content: space-evenly;
+
+  }
+
   :host {
     font-size: 1.25rem;
   }
@@ -78,6 +88,23 @@
 }
 
 @media screen and (max-width: 767px) {
+
+  :host {
+    display: block;
+  }
+
+  .homepage-container {
+    min-width: 500px;
+    // width: 347px;
+
+    display: grid;
+    // display: flex;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    justify-content: space-evenly;
+
+  }
+
   .title {
     font-size: 3rem;
   }
@@ -88,7 +115,19 @@
     font-size: 1.15rem;
   }
 
+  .homepage-container {
+    min-width: 375px;
+
+    display: grid;
+    // display: flex;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    justify-content: space-evenly;
+
+    padding: 0;
+  }
+
   .title {
-    font-size: 2.25rem;
+    font-size: 1.25rem;
   }
 }

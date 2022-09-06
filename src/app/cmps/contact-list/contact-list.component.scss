@@ -4,3 +4,17 @@
     grid-template-rows: auto;
     gap: 10px;
 }
+
+@media screen and (max-width: 1244px) {}
+
+@media screen and (max-width: 767px) {}
+
+@media screen and (max-width: 575px) {
+    .contact-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 10px;
+    }
+    
+}
