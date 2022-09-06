@@ -31,9 +31,9 @@ export class ContactEditComponent implements OnInit {
     async onSaveContact() {
         await lastValueFrom(this.contactService.save({ ...this.contact }))
 
-        this.router.navigateByUrl('/contacts')
         const onSave = this.contact._id ? 'Edit':'Added'
         this.UserMsgService.setUserMsg(`${onSave} contact (${this.contact.name})`)
+        this.router.navigateByUrl('/contacts')
     }
 
     onBack() {
